@@ -1,9 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
+import { ThemeProvider } from "styled-components";
+import GlobalStyles from "../Styles/GlobalStyles";
+import Theme from "../Styles/Theme";
+import Router from "./Router";
 
-class App extends Component {
-  render() {
-    return <div className="App" />;
-  }
-}
-
-export default App;
+export default () => (
+  <ThemeProvider theme={Theme}>
+    <>
+      <GlobalStyles />
+      <Router isLoggedIn={false} />
+    </>
+  </ThemeProvider>
+);
