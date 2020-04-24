@@ -8,6 +8,7 @@ export default () => (
   <ThemeProvider theme={Theme}>
     <>
       <GlobalStyles />
+      hello
       <Router isLoggedIn={false} />
     </>
   </ThemeProvider>
