@@ -66,12 +66,14 @@ export default () => {
         lastName.value !== ""
       ) {
         try {
-          const { data: { createAccount } } = await createAccountMutation();
+          const {
+            data: { createAccount }
+          } = await createAccountMutation();
           if (!createAccount) {
-            toast.error("Can't create account")
+            toast.error("Can't create account");
           } else {
-            toast.success("Account created! Log in Now");
-            setTimeout(() => setAction("LogIn"), 3000);
+            toast.success("Account created! Log In now");
+            setTimeout(() => setAction("logIn"), 3000);
           }
         } catch (e) {
           toast.error(e.message)
